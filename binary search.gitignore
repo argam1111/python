@@ -1,0 +1,30 @@
+n = input("Hi, what is your name?") 
+print("Hello\n" + n + "\nlets paly game!\n Think of number from 1 to 100, and i will guess it for you!") 
+firstnum, lastnum, cont = 1, 100, 0 
+avarege = (firstnum+lastnum)//2 
+q= "yes" 
+while (q == "yes"): 
+  firstnum, lastnum, cont = 1, 100, 0 
+  avarege = (firstnum+lastnum)//2 
+  q = input("do you wanna play again ?") 
+  if q == "yes": 
+    while (firstnum <= lastnum): 
+    cont= cont+1 
+    print("Is it the number", avarege ,"?") 
+    ans=input("(yes/no)\n") 
+    if ans == "yes": 
+      print("Yahhh! I got it right" , cont , "tries!") 
+      break 
+    elif ans == "no": 
+      print("Is number larger than" ,avarege ) 
+      ans1=input("(yes==/no)\n") 
+      if ans1 == "yes": 
+        firstnum = avarege 
+        avarege = (firstnum+lastnum)//2 
+      elif ans1 == "no":  
+        lastmun = avarege 
+        avarege = (firstnum+lastnum)//2 
+        continue 
+  elif q == "no": 
+    break  
+print("bay") 
